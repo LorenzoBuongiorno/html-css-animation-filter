@@ -1,0 +1,99 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.frame{
+    transform: scale(0.2);
+    width: 700px;
+    height: 1000px;
+    overflow: hidden;
+    position: absolute;
+    animation: frame 10s;
+}
+
+@keyframes frame{
+    0%{
+        bottom: 0px;
+        left: 0px;
+
+    }
+
+    21%{
+        bottom: 0px;
+        left: 500px;
+    }
+
+    52%{
+        left: 500px;
+        bottom: 0px;
+    }
+
+    62%{
+        left: 800px;
+        bottom: 400px;
+    }
+
+    100%{
+        left: 1200px;
+        bottom: -2000px;
+    }
+}
+
+
+.frame img{
+    animation: animated 7s steps(90);
+    
+}
+
+@keyframes animated{
+
+from{
+    transform: translate3d(0,0,0);
+}
+
+to{
+    transform: translate3d(-100%,0,0);
+}
+
+}
+
+.prato{
+    height: 1000px;
+    width: 100%;
+    background: linear-gradient(-180deg, rgba(46,196,18,1) 0%, rgba(26,84,11,1) 17%, rgba(77,33,10,1) 35%);
+    position: relative;
+    top: 580px;
+}
+
+.sky{
+    background-color: lightskyblue;
+    position: relative;
+}
+
+
+.sun{
+    width: 100px;
+    height: 100px;
+    font-size: 150px;
+    color: yellow;
+    animation: sole 5s infinite linear;
+    display: block;
+    text-align: center;
+}
+
+@keyframes sole {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    50%{
+        transform: rotate(100deg);
+    }
+
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
